@@ -1,10 +1,10 @@
 <% if author_signed_in? %>
 
-    <%= button_to 'Sign out', destroy_author_session_path, method: :delete %>
+    <%= button_to 'Sign out', destroy_author_session_path, method: :delete, class:'button' %>
 
 <% else %>
 
-    <%= button_to 'Sign in', new_author_session_path, method: :POST %>
+    <%= button_to 'Sign in', new_author_session_path, method: :POST, class:'button' %>
 
 <% end %>
 
