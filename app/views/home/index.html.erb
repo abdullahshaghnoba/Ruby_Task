@@ -1,0 +1,15 @@
+<% if author_signed_in? %>
+
+    <%= button_to 'Sign out', destroy_author_session_path, method: :delete %>
+
+<% else %>
+
+    <%= button_to 'Sign in', new_author_session_path, method: :POST %>
+
+<% end %>
+
+<h1>Home Page</h1>
+<div class="navbar">
+<%= link_to 'Authors', authors_path %>
+<%= link_to 'Books', books_path %>
+</div>

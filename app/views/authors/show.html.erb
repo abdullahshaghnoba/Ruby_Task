@@ -1,0 +1,10 @@
+<div class="container">
+<h1>Authors details</h1><br/>
+
+<h3><%= "Authors ID: #{@authors.id}" %></h3>
+<h3><%= "Authors name: #{@authors.name}" %></h3>
+<div>
+    <%= link_to 'Back', authors_path, class:'button' %> 
+    <%= link_to 'Edit', edit_author_path(@authors), class:'button' %>
+ </div>
+</div>

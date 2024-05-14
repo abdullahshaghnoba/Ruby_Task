@@ -1,0 +1,30 @@
+<h1>Listing all authors</h1>
+<div class="navbar">
+<%= link_to 'Home', root_path %>
+
+<%= link_to 'Add an author', new_author_path %>
+</div>
+<div class="container">
+  <%= form_for_filterrific @filterrific, url: authors_path, html: { method: :get } do |f| %>
+    <%= f.text_field :search_query, placeholder: 'Search by name' %>
+    <%= f.submit 'Filter', class: 'button' %>
+  <% end %>
+  
+  <table>
+    <thead>
+        <tr>
+            <th>Author name</th>
+            <th colspan="2">Author Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @authors.each do |author| %>
+            <tr>
+                <td><%= author.name %></td>
+                <td><%= link_to 'Details', author, class: 'button' %></td>
+                <td><%= link_to 'Edit', edit_author_path(author), class: 'button' %></td>
+            </tr>
+        <% end %>
+    </tbody>
+  </table>
+</div>

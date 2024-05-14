@@ -1,0 +1,19 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: rgsniqgk
+  pool: 5
+  username: <%= ENV['ELEPHANTSQL_USERNAME'] %>
+  password: <%= ENV['ELEPHANTSQL_PASSWORD'] %>
+  host: <%= ENV['ELEPHANTSQL_HOST'] %>
+  port: 5432
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: rgsniqgk
+  pool: 5
+  username: <%= ENV['ELEPHANTSQL_USERNAME'] %>
+  password: <%= ENV['ELEPHANTSQL_PASSWORD'] %>
+  host: <%= ENV['ELEPHANTSQL_HOST'] %>
+  port: 5432
